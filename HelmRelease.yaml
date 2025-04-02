@@ -1,0 +1,11 @@
+apiVersion: fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flux
+  namespace: flux
+spec:
+  git:
+    url: git@github.com:ivofulco/flux-app-example.git
+    branch: main
+    secretRef:
+      name: flux-git-key
